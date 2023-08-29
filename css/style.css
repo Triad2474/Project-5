@@ -1,0 +1,168 @@
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Bruno Ace SC';
+  margin: 0;
+}
+
+.wrapper {
+  background-image: url(https://cdn.discordapp.com/attachments/1137248754811011146/1137248945752526919/Galaxy.jfif);
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  background-color: rebeccapurple
+}
+
+.navbar {
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "aside-one main main main aside-two"
+    "aside-one main main main aside-two"
+    "footer footer footer footer footer";
+  min-height: 90vh;
+  margin-top: 3rem;
+  gap: 1rem;
+  grid-template-rows: auto;
+}
+
+.grid-item {
+  font-size: 1rem;
+  background-color: rgb(159, 243, 142);
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  color: white;
+  font-family: 'Bruno Ace SC';
+  margin: 0;
+}
+
+/* Add my own flair */
+.header {
+  grid-area: header;
+  border: 5px double blue;
+  color: white;
+  font-family: 'Bruno Ace SC';
+}
+
+.header:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+.main {
+  grid-area: main;
+  border: 5px double orange;
+}
+
+.main:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+.aside-one {
+  grid-area: aside-one;
+  border: 5px double red;
+}
+
+.aside-one:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+.aside-two {
+  grid-area: aside-two;
+  border: 5px double yellow;
+}
+
+.aside-two:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+.footer {
+  grid-area: footer;
+  border: 5px double black;
+  padding: 10px;
+}
+
+.footer:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  color: white;
+  text-shadow: 2px 2px red;
+}
+
+.footer-link {
+  text-align: center;
+  margin-left: -4%;
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
+}
+
+@media (min-width: 320px) and (max-width: 1199px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "aside-one"
+      "aside-two"
+      "main"
+      "footer";
+  }
+}
